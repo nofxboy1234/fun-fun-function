@@ -1,6 +1,10 @@
 const orderTotal = require('./orderTotal');
 // import orderTotal from './orderTotal';
 
+it('works', () => {
+  //
+});
+
 if (
   orderTotal({
     items: [{ name: 'Dragon candy', price: 2, quantity: 3 }],
