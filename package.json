@@ -1,7 +1,7 @@
 {
-  "name": "webpack-template",
+  "name": "fun-fun-function",
   "version": "1.0.1",
-  "description": "Webpack template repo with commonly used dependencies",
+  "description": "Play around code",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
