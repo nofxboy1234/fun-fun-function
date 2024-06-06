@@ -1,23 +1,20 @@
-// orderTotal is given an order and it outputs a total amount of all the
-// items that are contained in that order
-const someOrder = {
-  items: [
-    { name: 'Dragon food', price: 8, quantity: 8 },
-    { name: 'Dragon cage (small)', price: 800, quantity: 1 },
-    { name: 'Shipping', price: 40, shipping: true },
-  ],
-};
+// const orderTotal = (order) => {
+//   const totalNormalItems = order.items
+//     .filter((x) => !x.shipping)
+//     .reduce((prev, cur) => prev + cur.price * cur.quantity, 0);
+//   const shippingItem = order.items.find((x) => !!x.shipping);
+//   const shipping = totalNormalItems > 1000 ? 0 : shippingItem.price;
+//   return totalNormalItems + shipping;
+// };
 
-const orderTotal = (order) => {
-  const totalItems = order.items
-    .filter((x) => !x.shipping)
-    .reduce((prev, cur) => prev + cur.price * cur.quantity, 0);
-    
-  const shippingItem = order.items.find((x) => !!x.shipping);
-  const shipping = totalItems > 1000 ? 0 : shippingItem.price;
-  return totalItems + shipping;
-};
-
-const result = orderTotal(someOrder);
-
+if (
+  orderTotal({
+    items: [
+      { name: 'Dragon food', price: 8 },
+      { name: 'Dragon cage (small)', price: 800 },
+    ],
+  }) !== 808
+) {
+  throw new Error('Check fail: Happy path');
+}
 console.log('end');
