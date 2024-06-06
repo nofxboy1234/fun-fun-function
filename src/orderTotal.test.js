@@ -1,21 +1,12 @@
 const orderTotal = require('./orderTotal');
 // import orderTotal from './orderTotal';
 
-it('Quantity', () => {
+it('Quantity', () =>
   expect(
     orderTotal({
       items: [{ name: 'Dragon candy', price: 2, quantity: 3 }],
     }),
-  ).toBe(6);
-});
-
-if (
-  orderTotal({
-    items: [{ name: 'Dragon candy', price: 2, quantity: 3 }],
-  }) !== 6
-) {
-  throw new Error('Check fail: Quantity');
-}
+  ).toBe(6));
 
 if (
   orderTotal({
