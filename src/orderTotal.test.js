@@ -2,7 +2,7 @@ const orderTotal = require('./orderTotal');
 // import orderTotal from './orderTotal';
 
 it('works', () => {
-  //
+  expect(1).toBe(1);
 });
 
 if (
