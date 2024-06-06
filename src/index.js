@@ -3,7 +3,7 @@
 const someOrder = {
   items: [
     { name: 'Dragon food', price: 8, quantity: 8 },
-    { name: 'Dragon cage (small)', price: 800, quantity: 2 },
+    { name: 'Dragon cage (small)', price: 800, quantity: 1 },
     { name: 'Shipping', price: 40, shipping: true },
   ],
 };
