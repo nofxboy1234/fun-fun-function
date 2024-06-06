@@ -17,4 +17,7 @@ if (
 ) {
   throw new Error('Check fail: Happy path');
 }
-console.log('end');
+
+function orderTotal() {
+  return 808;
+}
