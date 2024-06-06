@@ -1,11 +1,14 @@
-// const orderTotal = (order) => {
-//   const totalNormalItems = order.items
-//     .filter((x) => !x.shipping)
-//     .reduce((prev, cur) => prev + cur.price * cur.quantity, 0);
-//   const shippingItem = order.items.find((x) => !!x.shipping);
-//   const shipping = totalNormalItems > 1000 ? 0 : shippingItem.price;
-//   return totalNormalItems + shipping;
-// };
+function orderTotal(order) {
+  return order.items.reduce((prev, cur) => cur.price * cur.quantity + prev, 0);
+}
+
+if (
+  orderTotal({
+    items: [{ name: 'Dragon candy', price: 2, quantity: 3 }],
+  }) !== 6
+) {
+  throw new Error('Check fail: Quantity');
+}
 
 if (
   orderTotal({
@@ -27,8 +30,4 @@ if (
   }) !== 60
 ) {
   throw new Error('Check fail: Happy path (Example 2)');
-}
-
-function orderTotal(order) {
-  return order.items.reduce((prev, cur) => cur.price + prev, 0);
 }
