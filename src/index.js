@@ -29,7 +29,6 @@ if (
   throw new Error('Check fail: Happy path (Example 2)');
 }
 
-
-function orderTotal() {
-  return 808;
+function orderTotal(order) {
+  return order.items.reduce((prev, cur) => cur.price + prev, 0);
 }
