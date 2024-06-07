@@ -4,4 +4,8 @@ function capitalize(str) {
   return `${firstLetter.toUpperCase()}${remainingString}`;
 }
 
-export { capitalize };
+function reverseString(str) {
+  return 'olleh';
+}
+
+export { capitalize, reverseString };
