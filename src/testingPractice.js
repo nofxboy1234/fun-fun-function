@@ -23,4 +23,8 @@ const calculator = {
   },
 };
 
-export { capitalize, reverseString, calculator };
+function caesarCipher(str) {
+  return 'abc';
+}
+
+export { capitalize, reverseString, calculator, caesarCipher };

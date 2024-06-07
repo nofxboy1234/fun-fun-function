@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator } from '../src/testingPractice';
+import { capitalize, reverseString, calculator, caesarCipher } from '../src/testingPractice';
 
 test('capitalize: takes a string and returns it with the first character capitalized', () => {
   expect(capitalize('hello')).toEqual('Hello');
@@ -24,4 +24,9 @@ test('calculator.divide: Divide num1 by num2', () => {
 
 test('calculator.multiply: Multiply num1 by num2', () => {
   expect(calculator.multiply(4, 3)).toEqual(12);
+});
+
+test('caesarCipher: takes a string and a shift factor and returns it with each character "shifted"', () => {
+  expect(caesarCipher('xyz', 3)).toEqual('abc');
+  expect(caesarCipher('HeLLo', 3)).toEqual('KhOOrI');
 });
