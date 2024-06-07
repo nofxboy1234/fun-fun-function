@@ -5,7 +5,7 @@ function capitalize(str) {
 }
 
 function reverseString(str) {
-  return 'olleh';
+  return str.split('').reverse().join('');
 }
 
 export { capitalize, reverseString };

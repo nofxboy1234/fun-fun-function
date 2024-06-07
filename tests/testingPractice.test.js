@@ -7,4 +7,5 @@ test('capitalize: takes a string and returns it with the first character capital
 
 test('reverseString: takes a string and returns it reversed', () => {
   expect(reverseString('hello')).toEqual('olleh');
+  expect(reverseString('cat')).toEqual('tac');
 });
