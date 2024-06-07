@@ -30,4 +30,6 @@ test('caesarCipher: takes a string and a shift factor and returns it with each c
   expect(caesarCipher('abc', 3)).toEqual('def');
   expect(caesarCipher('xyz', 3)).toEqual('abc');
   expect(caesarCipher('HeLLo', 3)).toEqual('KhOOr');
+  expect(caesarCipher('Hello, World!', 3)).toEqual('Khoor, Zruog!');
+  
 });

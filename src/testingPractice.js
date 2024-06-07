@@ -23,14 +23,28 @@ const calculator = {
   },
 };
 
+function isNumber(value) {
+  return typeof value === 'number';
+}
+
 function caesarCipher(str, shift) {
   const startCharCode = 'a'.charCodeAt(0) - 1;
   const endCharCode = 'z'.charCodeAt(0);
-  const charCodes = str.split('').map((char) => char.charCodeAt(0));
-
   const simplifiedShift = shift % 26;
 
+  const charCodes = str.split('').map((char) => {
+    if (char.match(/^[a-zA-Z]$/)) {
+      return char.charCodeAt(0);
+    } else {
+      return char;
+    }
+  });
+
   const charCodesShifted = charCodes.map((charCode) => {
+    if (!isNumber(charCode)) {
+      return charCode;
+    }
+
     const newCharCode = charCode + simplifiedShift;
 
     let finalCharCode;
@@ -44,10 +58,16 @@ function caesarCipher(str, shift) {
     return finalCharCode;
   });
 
-  const charsShifted = charCodesShifted.map((charCodeShifted) =>
-    String.fromCharCode(charCodeShifted),
-  );
+  const charsShifted = charCodesShifted.map((charCodeShifted) => {
+    if (!isNumber(charCodeShifted)) {
+      return charCodeShifted;
+    }
+
+    return String.fromCharCode(charCodeShifted);
+  });
+
   const strShifted = charsShifted.join('');
+
   return strShifted;
 }
 
