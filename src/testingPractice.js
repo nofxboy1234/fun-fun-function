@@ -23,10 +23,6 @@ const calculator = {
   },
 };
 
-function isNumber(value) {
-  return typeof value === 'number';
-}
-
 function caesarCipher(str, shift) {
   const startCharCode = 'a'.charCodeAt(0) - 1;
   const endCharCode = 'z'.charCodeAt(0);
@@ -69,6 +65,10 @@ function caesarCipher(str, shift) {
   const strShifted = charsShifted.join('');
 
   return strShifted;
+}
+
+function isNumber(value) {
+  return typeof value === 'number';
 }
 
 export { capitalize, reverseString, calculator, caesarCipher };
