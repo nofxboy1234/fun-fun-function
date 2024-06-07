@@ -81,11 +81,16 @@ function isNumber(value) {
 }
 
 function analyzeArray(arr) {
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+  const length = arr.length;
+  const average = arr.reduce((sum, num) => sum + num, 0) / length;
+
   return {
-    average: 4,
-    min: 1,
-    max: 8,
-    length: 6,
+    average,
+    min,
+    max,
+    length,
   };
 }
 

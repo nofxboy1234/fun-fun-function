@@ -41,7 +41,26 @@ test('caesarCipher: takes a string and a shift factor and returns it with each c
 
 test('analyzeArray: takes an array of numbers and returns an object with the following properties: average, min, max, and length.', () => {
   expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveProperty('average');
+  expect(analyzeArray([1, 8, 3, 4, 2, 6]).average).toEqual(4);
+
   expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveProperty('min');
+  expect(analyzeArray([1, 8, 3, 4, 2, 6]).min).toEqual(1);
+
   expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveProperty('max');
+  expect(analyzeArray([1, 8, 3, 4, 2, 6]).max).toEqual(8);
+
   expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveProperty('length');
+  expect(analyzeArray([1, 8, 3, 4, 2, 6]).length).toEqual(6);
+
+  expect(analyzeArray([2, 4, 6, 8, 10, 12])).toHaveProperty('average');
+  expect(analyzeArray([2, 4, 6, 8, 10, 12]).average).toEqual(7);
+
+  expect(analyzeArray([2, 4, 6, 8, 10, 12])).toHaveProperty('min');
+  expect(analyzeArray([2, 4, 6, 8, 10, 12]).min).toEqual(2);
+
+  expect(analyzeArray([2, 4, 6, 8, 10, 12])).toHaveProperty('max');
+  expect(analyzeArray([2, 4, 6, 8, 10, 12]).max).toEqual(12);
+
+  expect(analyzeArray([2, 4, 6, 8, 10, 12])).toHaveProperty('length');
+  expect(analyzeArray([2, 4, 6, 8, 10, 12]).length).toEqual(6);
 });
