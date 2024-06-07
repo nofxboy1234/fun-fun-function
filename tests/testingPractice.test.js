@@ -41,4 +41,7 @@ test('caesarCipher: takes a string and a shift factor and returns it with each c
 
 test('analyzeArray: takes an array of numbers and returns an object with the following properties: average, min, max, and length.', () => {
   expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveProperty('average');
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveProperty('min');
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveProperty('max');
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveProperty('length');
 });

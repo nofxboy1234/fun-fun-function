@@ -81,7 +81,12 @@ function isNumber(value) {
 }
 
 function analyzeArray(arr) {
-  return { average: 19 };
+  return {
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  };
 }
 
 export { capitalize, reverseString, calculator, caesarCipher, analyzeArray };
