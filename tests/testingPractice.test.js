@@ -1,4 +1,10 @@
-import { capitalize, reverseString, calculator, caesarCipher } from '../src/testingPractice';
+import {
+  capitalize,
+  reverseString,
+  calculator,
+  caesarCipher,
+  analyzeArray,
+} from '../src/testingPractice';
 
 test('capitalize: takes a string and returns it with the first character capitalized', () => {
   expect(capitalize('hello')).toEqual('Hello');
@@ -31,5 +37,8 @@ test('caesarCipher: takes a string and a shift factor and returns it with each c
   expect(caesarCipher('xyz', 3)).toEqual('abc');
   expect(caesarCipher('HeLLo', 3)).toEqual('KhOOr');
   expect(caesarCipher('Hello, World!', 3)).toEqual('Khoor, Zruog!');
-  
+});
+
+test('analyzeArray: takes an array of numbers and returns an object with the following properties: average, min, max, and length.', () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveProperty('average');
 });

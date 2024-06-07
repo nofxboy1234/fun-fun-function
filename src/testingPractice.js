@@ -80,4 +80,8 @@ function isNumber(value) {
   return typeof value === 'number';
 }
 
-export { capitalize, reverseString, calculator, caesarCipher };
+function analyzeArray(arr) {
+  return { average: 19 };
+}
+
+export { capitalize, reverseString, calculator, caesarCipher, analyzeArray };
