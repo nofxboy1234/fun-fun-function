@@ -24,26 +24,37 @@ const calculator = {
 };
 
 function caesarCipher(str, shift) {
+  const charCodes = mapCharCodes(str);
+  const charCodesShifted = shiftCharCodes(charCodes, shift);
+  const newCharacters = mapNewCharacters(charCodesShifted);
+  const newString = newCharacters.join('');
+
+  return newString;
+}
+
+function mapNewCharacters(charCodesShifted) {
+  return charCodesShifted.map((charCodeShifted) => {
+    if (!isNumber(charCodeShifted)) {
+      return charCodeShifted;
+    }
+
+    return String.fromCharCode(charCodeShifted);
+  });
+}
+
+function shiftCharCodes(charCodes, shift) {
   const startCharCode = 'a'.charCodeAt(0) - 1;
   const endCharCode = 'z'.charCodeAt(0);
   const simplifiedShift = shift % 26;
 
-  const charCodes = str.split('').map((char) => {
-    if (char.match(/^[a-zA-Z]$/)) {
-      return char.charCodeAt(0);
-    } else {
-      return char;
-    }
-  });
-
-  const charCodesShifted = charCodes.map((charCode) => {
+  return charCodes.map((charCode) => {
     if (!isNumber(charCode)) {
       return charCode;
     }
 
     const newCharCode = charCode + simplifiedShift;
-
     let finalCharCode;
+
     if (newCharCode > endCharCode) {
       const offset = simplifiedShift - (endCharCode - charCode);
       finalCharCode = startCharCode + offset;
@@ -53,18 +64,16 @@ function caesarCipher(str, shift) {
 
     return finalCharCode;
   });
+}
 
-  const charsShifted = charCodesShifted.map((charCodeShifted) => {
-    if (!isNumber(charCodeShifted)) {
-      return charCodeShifted;
+function mapCharCodes(str) {
+  return str.split('').map((char) => {
+    if (char.match(/^[a-zA-Z]$/)) {
+      return char.charCodeAt(0);
+    } else {
+      return char;
     }
-
-    return String.fromCharCode(charCodeShifted);
   });
-
-  const strShifted = charsShifted.join('');
-
-  return strShifted;
 }
 
 function isNumber(value) {
