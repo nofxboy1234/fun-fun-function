@@ -27,6 +27,7 @@ test('calculator.multiply: Multiply num1 by num2', () => {
 });
 
 test('caesarCipher: takes a string and a shift factor and returns it with each character "shifted"', () => {
+  expect(caesarCipher('abc', 3)).toEqual('def');
   expect(caesarCipher('xyz', 3)).toEqual('abc');
   expect(caesarCipher('HeLLo', 3)).toEqual('KhOOr');
 });
