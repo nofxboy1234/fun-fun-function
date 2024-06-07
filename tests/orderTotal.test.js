@@ -1,6 +1,6 @@
-const { it, expect } = require('@jest/globals');
+// const { it, expect } = require('@jest/globals');
 // import { it, expect } from '@jest/globals';
-const orderTotal = require('./orderTotal');
+const orderTotal = require('../src/orderTotal');
 // import orderTotal from './orderTotal';
 
 it('Quantity', () =>
