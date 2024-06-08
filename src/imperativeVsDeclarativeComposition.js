@@ -17,5 +17,5 @@ const doStuffBadly = (x) => {
 const doStuffBetter = pipe(g, f);
 console.log(
   doStuffBadly(20), // 42
-  doStuffBetter(20) // 42
+  doStuffBetter(20), // 42
 );
