@@ -2,6 +2,22 @@ import orderTotal from '../src/orderTotal';
 
 const emptyFunction = () => {};
 
+it('calls vatapi.com correctly', () => {
+  let isFakeFetchCalled = false;
+  const fakeFetch = (url) => {
+    expect(url).toBe('https://vatapi.com/v1/country-code-check?code=DE');
+    isFakeFetchCalled = true;
+  };
+  orderTotal(fakeFetch, {
+    country: 'DE',
+    items: [{ name: 'Dragon waffles', price: 20, quantity: 2 }],
+  }).then((result) => {
+    expect(isFakeFetchCalled).toBe(true);
+  });
+});
+
+it.todo('if country code specified');
+
 it('Quantity', () =>
   orderTotal(emptyFunction, {
     items: [{ name: 'Dragon candy', price: 2, quantity: 3 }],
