@@ -41,3 +41,8 @@ const {
 } = step1;
 log(fn);
 log(args);
+
+const step2 = fn(args);
+step2.then(log); // "some response"
+
+// iter.next(simulatedNetworkResponse);
