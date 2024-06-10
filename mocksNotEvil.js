@@ -1,11 +1,20 @@
-const express = require('express');
-const app = express();
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
-});
+// const express = require('express');
+// const app = express();
+// app.get('/', function (req, res) {
+//   res.send('Hello World!');
+// });
+// app.listen(3000, function () {
+//   console.log('Example app listening on port 3000!');
+// });
+
+// const express = require('express');
+// const hello = require('./hello.js');
+// const handleListen = require('./handleListen');
+// const log = require('./log');
+// const port = 3000;
+// const app = express();
+// app.get('/', hello);
+// app.listen(port, handleListen(port, log));
 
 const hello = (req, res) => res.send('Hello World!');
 {
