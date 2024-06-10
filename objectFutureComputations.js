@@ -26,6 +26,7 @@ function* sendMessageSaga(msg) {
 
 const iter = sendMessageSaga('Hello, world!');
 // Returns an object representing the status and value:
+// const step1 = iter.next('simulatedNetworkResponse');
 const step1 = iter.next();
 log(step1);
 /* =>
