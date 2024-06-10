@@ -8,13 +8,9 @@ export default [
     ignores: ['**/node_modules/', '**/dist/', 'package-lock.json'],
   },
   {
-    overrides: [
-      {
-        files: ['tests/**/*'],
-        env: {
-          jest: true,
-        },
-      },
-    ],
+    files: ['tests/**/*'],
+    env: {
+      jest: true,
+    },
   },
 ];
