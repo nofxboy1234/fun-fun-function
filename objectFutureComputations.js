@@ -9,10 +9,12 @@ const handleResponse = (response) => ({
   type: 'RECEIVED_RESPONSE',
   payload: response,
 });
+
 const handleError = (err) => ({
   type: 'IO_ERROR',
   payload: err,
 });
+
 function* sendMessageSaga(msg) {
   try {
     const response = yield call(sendMessage, msg);
