@@ -38,9 +38,13 @@ log(step1);
 }
 */
 
+const err = iter.throw(new Error('NetworkError'));
+log(err);
+
 const {
   value: { fn, args },
 } = step1;
+
 log(fn);
 log(args);
 
